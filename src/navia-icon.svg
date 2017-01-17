@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="260px" height="260px" viewBox="0 0 260 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>navia-logo-final_gradient-fullcolor-mark-type-tag copy 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0.0019956588%" y1="50.2503023%" x2="99.9986652%" y2="49.8808967%" id="linearGradient-1">
+            <stop stop-color="#45C2CC" offset="0%"></stop>
+            <stop stop-color="#2BAEB7" offset="41.32%"></stop>
+            <stop stop-color="#008C95" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="6.70453894%" y1="89.5563053%" x2="103.530848%" y2="20.1810287%" id="linearGradient-2">
+            <stop stop-color="#F26827" offset="0%"></stop>
+            <stop stop-color="#F47A23" offset="19.56%"></stop>
+            <stop stop-color="#FAA419" offset="71.54%"></stop>
+            <stop stop-color="#FCB415" offset="98.16%"></stop>
+        </linearGradient>
+        <linearGradient x1="-4.07942451%" y1="4.47075572%" x2="92.3907785%" y2="89.0250883%" id="linearGradient-3">
+            <stop stop-color="#AC2228" offset="0%"></stop>
+            <stop stop-color="#A52429" offset="35.04%"></stop>
+            <stop stop-color="#92282B" offset="85.99%"></stop>
+            <stop stop-color="#8B2A2C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="navia-logo-final_gradient-fullcolor-mark-type-tag-copy-3" sketch:type="MSLayerGroup" transform="translate(2.000000, 0.000000)">
+            <path d="M226.571815,144.779899 L226.583631,144.397778 C147.777641,90.2376768 0,191.301515 0,191.301515 C0,191.301515 124.669374,281.814343 206.786297,253.471717 C232.352164,246.342727 251.286974,223.070101 251.688697,195.187071 C251.960451,174.517071 242.039467,156.134545 226.571815,144.779899 L226.571815,144.779899 Z M220.110113,223.788384 C204.113395,239.528889 178.508144,239.238687 162.938092,223.147576 C147.366728,207.04596 147.696246,181.242929 163.702154,165.507677 C179.700185,149.777677 205.290995,150.066566 220.859733,166.164242 C236.444226,182.248788 236.109456,208.043939 220.110113,223.788384 L220.110113,223.788384 Z" id="Shape" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+            <path d="M189.478072,0.313131313 C189.478072,0.313131313 100.0448,127.819495 130.019118,210.373434 C137.643979,236.110808 161.465108,254.867576 189.656615,254.816364 C210.533087,254.783535 228.980841,244.430808 240.184451,228.618081 L240.566482,228.618081 C294.031097,148.06798 189.478072,0.313131313 189.478072,0.313131313 L189.478072,0.313131313 Z M220.110113,223.788384 C204.113395,239.528889 178.508144,239.238687 162.938092,223.147576 C147.366728,207.04596 147.696246,181.242929 163.702154,165.507677 C179.700185,149.777677 205.290995,150.066566 220.859733,166.164242 C236.444226,182.248788 236.109456,208.043939 220.110113,223.788384 L220.110113,223.788384 Z" id="Shape" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup"></path>
+            <path d="M251.300103,185.320202 L251.242338,185.062828 C233.792328,91.0229293 57.8665026,57.9950505 57.8665026,57.9950505 C57.8665026,57.9950505 82.0224,210.133131 160.133908,248.181111 C183.271056,261.220505 213.093087,258.149091 233.112287,238.702929 C247.889395,224.300505 254.192246,204.285758 251.300103,185.320202 L251.300103,185.320202 Z" id="Shape" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup"></path>
+            <path d="M218.764472,222.399091 C203.533128,237.395051 179.146174,237.116667 164.315241,221.789798 C149.485621,206.456364 149.799385,181.877172 165.043856,166.895657 C180.279138,151.914141 204.652964,152.188586 219.479959,167.52202 C234.320082,182.839697 234.005005,207.407071 218.764472,222.399091 L218.764472,222.399091 Z" id="Path-Copy" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
