@@ -39,12 +39,18 @@ class Dashboard extends Component {
         localStorage.setItem('allExpenses' , JSON.stringify(this.state.expenses));
         this.setState({expenses:JSON.parse(localStorage.getItem('allExpenses'))});
     }
+    handleClicks(val,event){
+        console.log('value:', val);
+        console.log('event:', event);
+        val == 'expense' ? hashHistory.push('/add') : hashHistory.push('/allCategories');
+
+    }
     render() {
         let rows= [];
         let printRows = [];
         let reportExpense = [];
         this.state.expenses.forEach((expense)=>{
-            if(expense.category.indexOf(this.state.filterText) === -1){
+            if(expense.category.toUpperCase().indexOf(this.state.filterText) === -1 && expense.category.toLowerCase().indexOf(this.state.filterText) === -1){
                 return;
             }
             rows.push(<ExpenseTable expense={expense} key={expense.Id}
@@ -54,6 +60,7 @@ class Dashboard extends Component {
             reportExpense.push(expense);
             //printRows.push(<PrintRowContent expense={expense} key={expense.Id}/>);
         });
+
         function generateReport() {
             let total = 0;
             /*let printContents = <GenerateReport />;
@@ -72,7 +79,7 @@ class Dashboard extends Component {
                 }
             }
             check();
-            popupWin.document.write('<html><title>Expense Report</title><link rel="stylesheet" type="text/css" href="App.css"><body onload="window.print()"><h3>My Expenses</h3>'+printContents+'</html>');
+            popupWin.document.write('<html><title>Expense Report</title><link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"><body onload="window.print()"><h3>My Expenses</h3>'+printContents+'</html>');
             /*popupWin.document.write('<html><head><title>Expense Report</title><link rel="stylesheet" type="text/css" href="App.css"></head><body onload="window.print()"><div><h1>All Expenses</h1><table class="table"> <tbody> <tr> <th class="table-border">Id</th> <th class="table-border">Description</th> <th class="table-border">Amount</th> <th class="table-border">Category</th> <th class="table-border">Created On</th> </tr></tbody> </table></div></html>');
             for(var i=0;i<reportExpense.length;i++){
                 console.log('called');
@@ -87,19 +94,22 @@ class Dashboard extends Component {
                 <div className="App-intro">
                     <div>
                         <h1>All Expenses</h1>
-                        <button><Link to="/add">Add Expense!</Link></button>
-                        <button><Link to="/allCategories">All Categories!</Link></button>
-                        <button onClick={generateReport}>Generate Report</button>
-                        <div>
-                            <input
+                        <button className="btn btn-primary" onClick={this.handleClicks.bind(this,'expense')}>Add Expense!</button>
+                        <button className="btn btn-primary" onClick={this.handleClicks.bind(this,'categories')}>All Categories!</button>
+                        <button className="btn btn-success" onClick={generateReport}>Generate Report</button>
+                        <div className="row ">
+                            <div className="col-md-4"></div>
+                            <div className="col-md-4">
+                            <input className="form-control" style={{marginTop: 5}}
                                 type="text"
                                 placeholder="Search By Category..."
                                 value={this.state.filterText}
                                 onChange={this.handleChange.bind(this)}
                             />
+                            </div>
                         </div>
-                        <div id="expenses">
-                        <table className="table">
+                        <div className="table-responsive" id="expenses">
+                        <table className="table table-bordered table-hover table-border">
                             <tbody>
                             <tr>
                                 <th className="table-border">Id</th>
@@ -138,9 +148,9 @@ class ExpenseTable extends Component {
                 <td className="table-border">{expense.amount}</td>
                 <td className="table-border">{expense.category}</td>
                 <td className="table-border">{expense.date}</td>
-                <td className="table-border">
-                    <button onClick={this.handleEdit.bind(this)}>Edit</button>
-                    <button onClick={this.handleDelete.bind(this)}>Delete</button>
+                <td className="table-border ButtonToolbar">
+                    <button className="btn btn-primary" onClick={this.handleEdit.bind(this)}>Edit</button>
+                    <button className="btn btn-danger" onClick={this.handleDelete.bind(this)}>Delete</button>
                 </td>
             </tr>
         )

@@ -25,8 +25,8 @@ class Header extends Component {
             }
         }
         {this.props.user ?
-            welcomeMessage =  (<div className="welcomeMessage">{'Welcome ' + this.props.user.userName + '!'}
-                    <button className="logoutButton" href="" onClick={this.handleLogout.bind(this)}>Logout</button></div>
+            welcomeMessage =  (<div className="welcomeMessage">{'Welcome ' + this.props.user.userName.toUpperCase() + ' !'}
+                    <button className="btn btn-default logoutButton" href="" onClick={this.handleLogout.bind(this)}>Logout</button></div>
             ):(
             welcomeMessage = ''
             )

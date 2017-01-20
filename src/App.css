@@ -11,14 +11,15 @@ body {
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #bf3b3b;
+  height: 248px;
   padding: 20px;
   color: white;
 }
 
 .App-intro {
-  font-size: large;
+  font-size: small;
+  padding: 45px;
 }
 
 .table {
@@ -26,7 +27,7 @@ body {
 }
 
 .table-border {
-  border: 1px solid gray;
+  border: 1px solid #bf3b3b !important;
 }
 
 .Add-Button {

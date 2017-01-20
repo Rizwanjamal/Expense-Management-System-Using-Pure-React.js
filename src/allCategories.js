@@ -20,6 +20,11 @@ class AllCategories extends Component {
         this.state={categories: this.myCategories};
         console.log('user :',this.user);
         console.log('myCategories :',this.myCategories);
+
+    }
+
+    handleAdd(event){
+        hashHistory.push('/addCategory');
     }
 
     render() {
@@ -33,8 +38,9 @@ class AllCategories extends Component {
                 <div className="App-intro">
                     <div>
                         <h1>All Categories</h1>
-                        <button><Link to="/addCategory">Add Category!</Link></button>
-                        <table className="table">
+                        <button className="btn btn-primary" onClick={this.handleAdd.bind(this)}>Add Category!</button>
+                        <div className="table-responsive">
+                        <table className="table table-bordered table-hover table-border">
                             <tbody>
                             <tr>
                                 <th className="table-border">Id</th>
@@ -44,6 +50,7 @@ class AllCategories extends Component {
                             {rows}
                             </tbody>
                         </table>
+                        </div>
                     </div>
                 </div>
             </div>

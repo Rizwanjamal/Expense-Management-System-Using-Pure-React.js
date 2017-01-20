@@ -38,30 +38,30 @@ class SignIn extends Component {
             <div className="App">
                 <Header />
                 <div className="App-intro">
-                    <h1>Sign In</h1>
-                    <table className="signupForm">
-                        <tbody>
-                        <tr>
-                            <td>
-                                <form onSubmit={this.handleSubmit.bind(this)}>
-                                    <fieldset>
-                                        <legend>Sign In</legend>
-                                        <label className="signupLabels">Email :
-                                            <input type="email" value={this.state.email}
-                                                   data-field="email" required
-                                                   onChange={this.handleChange.bind(this)}/></label><br />
-                                        <label className="signupLabels">Password :
-                                            <input type="password" value={this.state.password}
-                                                   data-field="password" required
-                                                   onChange={this.handleChange.bind(this)}/></label><br /><br />
-                                        <button type="submit" >Sign In</button><br /><br />
-                                        {this.error}
-                                    </fieldset>
-                                </form>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <form onSubmit={this.handleSubmit.bind(this)}>
+                        <div className="form-group">
+                            <label className="control-label" htmlFor="email">Email:</label>
+                            <input type="email" className="form-control" id="email" placeholder="Enter Email"
+                                   value={this.state.email}
+                                   data-field="email" required
+                                   onChange={this.handleChange.bind(this)}/>
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="password">Password:</label>
+                            <input type="password" className="form-control" id="password" placeholder="Password"
+                                   value={this.state.password}
+                                   data-field="password" required
+                                   onChange={this.handleChange.bind(this)}/>
+                        </div>
+
+                        <div className="form-group">
+                            <button className="btn btn-primary" type="submit" >Sign In</button><br /><br />
+                        </div>
+                        {this.error}
+
+                    </form>
+
                 </div>
             </div>
         );

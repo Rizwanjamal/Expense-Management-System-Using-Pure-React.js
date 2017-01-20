@@ -34,35 +34,40 @@ class App extends Component {
             <div className="App">
                 <Header />
                 <div className="App-intro">
-                        <h1>Sign Up</h1>
-                    <table className="signupForm">
-                        <tbody>
-                        <tr>
-                        <td>
-                            <form onSubmit={this.handleSubmit.bind(this)}>
-                                <fieldset>
-                                    <legend>Sign Up</legend>
-                                    <label className="signupLabels">UserName :
-                                        <input type="text" value={this.state.userName}
-                                               data-field="userName" required
-                                               onChange={this.handleChange.bind(this)}/></label><br />
-                                    <label className="signupLabels">Email :
-                                        <input type="email" value={this.state.email}
-                                               data-field="email" required
-                                               onChange={this.handleChange.bind(this)}/></label><br />
-                                    <label className="signupLabels">Password :
-                                        <input type="text" value={this.state.password}
-                                               data-field="password" required
-                                               onChange={this.handleChange.bind(this)}/></label><br /><br />
-                                    <button type="submit">Sign Up</button><br /><br />
-                                    <span>_______or_______</span><br /><br />
-                                    <button onClick={this.handleSignIn.bind(this)}>Sign In</button><br /><br />
-                                </fieldset>
-                            </form>
-                        </td>
-                        </tr>
-                        </tbody>
-                    </table>
+
+                    <form onSubmit={this.handleSubmit.bind(this)}>
+                        <div className="form-group">
+                            <label className="control-label" htmlFor="name">User Name:</label>
+                            <input type="text" className="form-control" id="name" placeholder="Enter Name"
+                                   value={this.state.userName}
+                                   data-field="userName" required
+                                   onChange={this.handleChange.bind(this)}/>
+                        </div>
+                        <div className="form-group">
+                            <label className="control-label" htmlFor="email">Email:</label>
+                            <input type="email" className="form-control" id="email" placeholder="Enter Email"
+                                   value={this.state.email}
+                                   data-field="email" required
+                                   onChange={this.handleChange.bind(this)}/>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="password">Password</label>
+                            <input type="text" className="form-control" id="password" placeholder="Password"
+                                   value={this.state.password}
+                                   data-field="password" required
+                                   onChange={this.handleChange.bind(this)}/>
+                        </div>
+
+                        <div className="form-group">
+                        <button type="submit" className="btn btn-primary">Sing Up</button>
+                        </div>
+
+                        <div className="form-group">
+                        <span>_______or_______</span><br /><br />
+                        <button className="btn btn-info" onClick={this.handleSignIn.bind(this)}>Sign In</button><br /><br />
+                        </div>
+                    </form>
+
                 </div>
             </div>
         );
