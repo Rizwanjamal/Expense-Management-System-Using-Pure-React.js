@@ -71,22 +71,33 @@ class AddExpense extends Component {
                 <div className="App-intro">
                     <h1>{titleText}</h1>
                     <form onSubmit={this.handleSubmit.bind(this)}>
-                        <fieldset>
-                            <legend>{titleText}</legend>
-                            <span className="descriptionLabel">Description :</span>  <input type="text" value={this.state.description}
-                                                 data-field="description" required
-                                                 onChange={this.handleChange.bind(this)} /><br />
-                            <span>Amount :</span>       <input type="number" value={this.state.amount}
-                                                 data-field="amount" required
-                                                 onChange={this.handleChange.bind(this)} /><br />
-                            <span className="categoryLabel">Category :</span>
-                            <select value={this.state.category} data-field="category" required
-                                    onChange={this.handleChange.bind(this)} className="select">
+                        <div className="form-group">
+                        <label className="control-label" htmlFor="description">Description:</label>
+                            <input type="text" className="form-control" id="description" placeholder="Enter Description"
+                                   value={this.state.description}
+                                   data-field="description" required
+                                   onChange={this.handleChange.bind(this)} />
+                        </div>
+                        <div className="form-group">
+                        <label className="control-label" htmlFor="amount">Amount:</label>
+                        <input type="number" className="form-control" id="amount" placeholder="Enter Amount"
+                               value={this.state.amount}
+                               data-field="amount" required
+                               onChange={this.handleChange.bind(this)} />
+                        </div>
+                        <div className="form-group">
+                        <label className="control-label" htmlFor="category">Category:</label>
+                        <select className="form-control" id="category" value={this.state.category} data-field="category" required
+                                    onChange={this.handleChange.bind(this)}>
                                 <option value="">Select Category</option>
                                 {options}
-                            </select><br />
-                            <button type="submit" className="Add-Button">{buttonText}</button>
-                        </fieldset>
+                            </select>
+                        </div>
+
+                        <div className="form-group">
+                            <button type="submit" className="btn btn-primary">{buttonText}</button>
+                        </div>
+
                     </form>
                 </div>
             </div>

@@ -31,13 +31,14 @@ class AddCategory extends Component {
                 <div className="App-intro">
                     <h1>Add Category</h1>
                     <form onSubmit={this.handleSubmit.bind(this)}>
-                        <fieldset>
-                            <legend>Add Category</legend>
-                            <span>Category Name :</span>  <input type="text"
-                                                           value={this.state.categoryName}
-                                                           onChange={this.handleChange.bind(this)} /><br />
-                            <button type="submit" className="Add-Button">Add</button>
-                        </fieldset>
+                        <div className="form-group">
+                        <label className="control-label" htmlFor="name">Category Name:</label>
+                        <input type="text" className="form-control" id="name" placeholder="Category Name"
+                               value={this.state.categoryName}
+                               onChange={this.handleChange.bind(this)} />
+                        </div>
+                        <button type="submit" className="btn btn-primary">Add</button>
+
                     </form>
                 </div>
             </div>
